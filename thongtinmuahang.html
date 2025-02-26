@@ -1,70 +1,96 @@
+
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Thông Tin Mua Hàng</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin giao hàng</title>
     <style>
-      .thongtin {
-        width: auto;
-        height: 150px;
-        background: rgb(255, 0, 0);
-        border-radius: 20px;
-      }
-      .thongtin p {
-        color: white;
-        font-size: 50px;
-        margin: -140px 200px;
-      }
-      h2 {
-        width: auto;
-        height: 150px;
-        padding: 10px 0 0 20px;
-        text-align: center;
-        font-size: 25px;
-        background: darkcyan;
-        border-radius: 20px;
-      }
-      .dau {
-        margin: 100px;
-      }
-      .from p {
-        font-size: 30px;
-        text-align: center;
-      }
-      .from input {
-        margin: 5px 800px;
-        width: 300px;
-        height: 50px;
-        border-radius: 10px;
-        text-align: center;
-      }
-      button {
-        margin: 30px 800px;
-        width: 300px;
-        height: 50px;
-        background: red;
-        border-radius: 10px;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .khung {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        .nhom-nhap {
+            margin-bottom: 15px;
+        }
+        .nhom-nhap label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .nhom-nhap input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .nhom-nhap select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .nut-bam {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .hotro {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hotro a {
+            color: blue;
+            text-decoration: none;
+        }
     </style>
-  </head>
-  <body>
-    <div class="thongtin">
-      <img src="DKLogo.png" width="200px" />
-      <p>DK HOME</p>
+</head>
+<body>
+    <div class="khung">
+        <h2>Thông tin khách hàng</h2>
+        <div class="nhom-nhap">
+
+            <label for="ten">Họ & Tên:</label>
+            <input type="text" id="ten" placeholder="Nhập họ & tên"  >
+        </div>
+        <div class="nhom-nhap">
+            <label for="sdt">Số điện thoại:</label>
+            <input type="number" id="sdt" placeholder="Nhập số điện thoại">
+        </div>
+       <h3>Địa chỉ nhận hàng</h3>
+        <div class="nhom-nhap">
+            <label for="tinh">Tỉnh/Thành, Quận/Huyện & Phường/Xã:</label>
+            <select id="tinh">
+                <option value="">Chọn Tỉnh/Thành, Quận/Huyện & Phường/Xã</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+                <option value="hn">Hà Nội</option>
+            </select>
+        </div>
+        <div class="nhom-nhap">
+            <label for="dia-chi">Số nhà, tòa nhà & tên đường:</label>
+            <input type="text" id="dia-chi" placeholder="Nhập địa chỉ cụ thể">
+        </div>
+        <a href="thanhtoanthanhcong.html"><button class="nut-bam">Xác nhận đơn hàng</button></a
+        
+        <div class="hotro">
+            <p>Liên hệ Dk Home <a href="tel:1900-6035">1900-6035</a> nếu cần trợ giúp</p>
+        </div>
     </div>
-    <div class="dau">
-      <h2>Yêu Cầu Truy Cập Thông Tin Người Mua Trên Đơn Hàng</h2>
-    </div>
-    <div class="from">
-      <p>*Emall Đăng Kí Tài Khoản DK HOME</p>
-      <input type="text" placeholder="VD:nguyenducduong@gmail.com" />
-      <p>* Tên Khách Hàng</p>
-      <input type="text" placeholder="Họ Và Tên" />
-      <p>* Địa Chỉ Khách Hàng</p>
-      <input type="text" placeholder="VD:Ấp 3 Long Cang" />
-      <p>* Số Điện Thoại Khách Hàng</p>
-      <input type="number" placeholder="VD:0123456789" />
-      <br />
-      <a href="thanhtoanthanhcong.html"><button>Đặt Hàng</button></a>
-    </div>
-  </body>
+</body>
 </html>
